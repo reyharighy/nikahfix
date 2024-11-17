@@ -1,0 +1,472 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --primary-color: #1b1c1f;
+    --secondary-color: #101113;
+    --accent-color: #d52c3a;
+    --primary-text-color: #d9d9d9;
+    --secondary-text-color: #7f8082;
+}
+
+html {
+    font-family: "Poppins", sans-serif;
+    font-size: 14pt;
+    color: var(--primary-text-color);
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--primary-color);
+}
+
+.container {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.container > img {
+    margin-bottom: 5rem;
+    scale: 1.5;
+}
+
+.container > p {
+    margin-bottom: 3rem;
+    font-weight: 600;
+}
+
+.container p {
+    text-align: center;
+}
+
+.user {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.user p {
+    margin-top: .5rem;
+    margin-bottom: 5rem;
+}
+
+.user img {
+    transition: .5s ease;
+}
+
+.user img:hover {
+    scale: 1.1;
+    cursor: pointer;
+}
+
+.description-container {
+    background-image: linear-gradient(to top, var(--primary-color) 25%, transparent 70%);
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.description {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: absolute;
+    bottom: 0;
+    gap: .25rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.description > h1 {
+    font-weight: 600;
+    line-height: 2.2rem;
+}
+
+.description > img {
+    width: 100px;
+    height: auto;
+}
+
+#date-block {
+    display: flex;
+    align-items: center;
+    padding: 5px 0;
+    gap: .5rem;
+}
+
+#date-block p {
+    font-size: .75rem;
+    font-weight: 500;
+}
+
+#date-block button {
+    font-family: inherit;
+    font-weight: 500;
+    padding: .45em .7em;
+    border: none;
+    background-color: var(--accent-color);
+    border-radius: 5px;
+    color: var(--primary-text-color);
+}
+
+#hashtags {
+    display: flex;
+    gap: .5rem;
+    flex-wrap: wrap;
+}
+
+#hashtags button {
+    font-family: inherit;
+    font-size: .65rem;
+    background-color: var(--secondary-text-color);
+    padding: .25em .5em;
+    color: var(--primary-text-color);
+    border: none;
+    border-radius: 10px;
+}
+
+#see-more a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#see-more img {
+    width: 2rem;
+    rotate: 90deg;
+    animation-name: float-up;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes float-up {
+    0% {
+        translate: 0px 0px;
+    }
+
+    70% {
+        translate: 0px -10px;
+    }
+
+    80% {
+        translate: 0px 0px;
+    }
+
+    90% {
+        translate: 0px -10px;
+    }
+
+    100% {
+        translate: 0px 0px;
+    }
+}
+
+#see-more a {
+    font-family: inherit;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-decoration: none;
+    color: var(--primary-text-color);
+}
+
+video {
+    width: 100%;
+    aspect-ratio: 1.5/1;
+    object-fit: cover;
+    object-position: 0 80%;
+}
+
+.details-container {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    gap: .5rem;
+}
+
+.zoom {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.zoom img {
+    width: 100%;
+    object-fit: cover;
+    scale: 1.5;
+}
+
+.event-title {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.event-title img {
+    height: 30px;
+}
+
+.event-title p {
+    font-size: .75rem;
+    font-weight: 500;
+    color: var(--primary-text-color);
+}
+
+.details-container > p {
+    margin-top: 1rem;
+    font-weight: 600;
+}
+
+.accent-btn {
+    max-width: max-content;
+}
+
+.details-container img {
+    border-radius: 10px;
+}
+
+.event-metadata {
+    display: flex;
+    flex-direction: row;
+    gap: .5rem;
+}
+
+.event-metadata p {
+    font-size: .85rem;
+}
+
+.event-metadata button {
+    font-family: inherit;
+    background-color: var(--secondary-text-color);
+    border: none;
+    padding: .075em .5em;
+    height: fit-content;
+    font-size: .75rem;
+    border-radius: 5px;
+}
+
+#green-info {
+    color: rgb(42, 217, 42);
+}
+
+.event-metadata img {
+    height: 25px;
+}
+
+.details-container > button {
+    text-align: left;
+    background-color: var(--accent-color);
+    padding: .075em .5em;
+    border: none;
+    border-radius: 5px;
+    font-family: inherit;
+    font-weight: 600;
+    color: var(--primary-text-color);
+}
+
+#intro {
+    margin-top: .25rem;
+    font-weight: 400;
+    font-size: .8rem;
+}
+
+#verse {
+    margin-top: .25rem;
+    color: var(--secondary-text-color);
+    font-size: .6rem;
+}
+
+#breaking-news-text {
+    font-size: .6rem;
+    font-style: italic;
+    color: var(--secondary-text-color);
+}
+
+.bride-groom {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.profile-picture {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: .5rem;
+}
+
+.profile-picture img {
+    width: 50%;
+}
+
+.bride-groom .name, .bride-groom .parent-name {
+    display: flex;
+    flex-direction: row;
+    gap: .5rem;
+}
+
+.bride-groom .name div, .bride-groom .parent-name div {
+    width: 50%;
+}
+
+.bride-groom .name div p {
+    font-size: .75rem;
+    font-weight: 500;
+}
+
+.bride-groom .parent-name div p {
+    font-size: .6rem;
+    font-weight: 600;
+    color: var(--secondary-text-color);
+}
+
+.text .duration, .story-text {
+    font-size: .5rem;
+    font-weight: 500;
+    color: var(--secondary-text-color);
+}
+
+.text .title {
+    font-size: .75rem;
+}
+
+.love-story {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.story {
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+}
+
+.thumbnail-text {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.thumbnail-text .thumbnail {
+    width: 50%;
+    object-fit: cover;
+}
+
+.thumbnail-text .thumbnail img {
+    width: 100%;
+}
+
+.thumbnail-text .text {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    max-width: 50%;
+    justify-content: center;
+}
+
+.story-text p {
+    font-size: .55rem;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    gap: .5rem;
+}
+
+.gallery-container .gallery {
+    display: flex;
+}
+
+.gallery-container .gallery img {
+    width: 100%;
+    height: 7.5rem;
+    object-fit: cover;
+
+}
+
+.wishes {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: .5rem;
+    max-height: 15rem;
+    overflow-y: auto;
+}
+
+.wish {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+
+.wish div:first-child {
+    box-sizing: border-box;
+    width: 2.5rem;
+    max-height: 2.5rem;
+    border-radius: 10px;
+    object-fit: cover;
+    display: flex;
+    justify-content: center;
+}
+
+.user-update p:first-child {
+    font-size: .75rem;
+    font-weight: 600;
+}
+
+.user-update p:first-child + p{
+    font-size: .6rem;
+    font-weight: 300;
+    margin-top: .25rem;
+    color: var(--secondary-text-color);
+}
+
+form {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: .25rem;
+}
+
+form label {
+    margin-top: .5rem;
+    font-weight: 500;
+    font-size: .75rem;
+}
+
+form input {
+    padding: .75rem .5rem;
+    border: none;
+    border-radius: 5px;
+}
+
+form input[type="submit"] {
+    background-color: var(--secondary-text-color);
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 1rem;
+    margin-top: .75rem;
+}
+
+footer {
+    padding: 2rem;
+    text-align: center;
+    font-size: .65rem;
+}
